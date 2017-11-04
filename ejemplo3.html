@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geolocalizacion</title>
+</head>
+<body>
+	<p>
+		<button onclick="geoFindMe()">Muestame mi localisacion</button>
+	</p>
+	<div id="out"></div>
+	<script type="text/javascript">
+		function geoFindMe() {
+			var output =  document.getElementById("out");
+
+		if (!navigator.geolocation) {
+			output.innerHTML = "<p>No se puede Geolocalizacion</p>";
+			return;
+		}
+		function success(position){
+			var latitud = position.coords.latitude;
+			var longitude =  position.coords.longitude;
+
+			output.innerHTML = "<p>Latitud es: " + latitud + "<br> longitud es: " + longitude + "</p>";
+			 var img = new Image();
+			 img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitud + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+			 output.appendChild(img);
+			}
+			function error(){
+				output.innerHTML =  "Fallo la localisacion";
+			}
+			output.innerHTML = "<p>Localizando...</p>";
+
+			navigator.geolocation.getCurrentPosition(success, error);
+		}
+	</script>
+</body>
+</html>

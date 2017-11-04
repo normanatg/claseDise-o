@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcula tu peso</title>
+</head>
+<body>
+	<h1>Calcula tu peso en otros planetas</h1>
+	<p>En la tierra pesas distinto que en otros planetas martes y Jupiter</p>
+	<script type="text/javascript">
+		var usuario = prompt("Cual es tu peso??");
+		var g_tierra = 9.8;
+		var g_marte = 3.7;
+		var g_jupiter = 24.8;
+		var peso = 81;
+		var peso_final;
+		peso_final = (usuario * g_marte)/g_tierra;
+		document.write(peso_final);
+		/*Quitando tantos decimales*/
+		//document.write(peso_final.toFixed(2));
+	</script>
+</body>
+</html>

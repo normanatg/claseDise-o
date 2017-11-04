@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo</title>
+	<style type="text/css">
+		canvas{
+			border-style: solid;
+		}
+	</style>
+	<script type="text/javascript">
+		function cargaDeContexto(idCanvas){
+			var elemento = document.getElementById(idCanvas);
+			if (elemento && elemento.getContext) {
+				var contexto = elemento.getContext('2d');
+				if (contexto) {
+					return contexto;
+				}
+			}
+			return false;
+		}
+		function funcionDibujo() {
+			var contexto = cargaDeContexto('micanvas');
+			if (contexto) {
+				contexto.fillStyle = 'rgba(255,0,0,0.3)';
+				//dibujo un rectángulo azul
+				contexto.fillRect(10,10,50,50);
+				//cambio el color a amarillo con un poco de transparencia
+				contexto.fillStyle = 'rgba(255,255,0,0.2)';
+				//pinto un rectángulo amarillo semitransparente
+				contexto.fillRect(35,35,50,50);
+				}
+				var ctx = cargaDeContexto('micanvas2');
+				if (ctx) {
+					ctx.fillRect(10,10,150,50);
+				}
+			}
+			</script>
+	</head>
+<body onload="funcionDibujo()">
+<canvas id="micanvas" width="200" height="100">
+	Este texto se muestra para los navegadores no compatiblres con Canvas
+</canvas>
+<canvas id="micanvas2" width="200" height="100">
+	Este texto se muestra para los navegadores no compatiblres con Canvas
+</canvas>
+
+</body>
+</html>
