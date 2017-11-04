@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Norman Torres">
+    <meta name="description" content="Mi primera pagina">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hola Mundo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobil.css">
+  </head>
+  <body>
+    <header >
+     <nav class="navbar navbar-inverse nav-static-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" 
+            data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Norman</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Quienes somos</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
+                aria-expanded="false">Dropdown <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Salir</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+        
+      </nav>
+    </header>
+    <div class="container table-responsive">
+      <table class="table"> 
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Edad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Norman</td>
+          <td>Torres</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Antonio</td>
+          <td>Gutierrez</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Armando</td>
+          <td>Valenzuela</td>
+          <td>32</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Elizabeth</td>
+          <td>Sandoval</td>
+          <td>15</td>
+        </tr>
+      </tbody>  
+    </table>
+    <form class="form-horizontal" role="form">
+      <div class="form-group has-success">
+          <label class="col-sm-4 control-label" for="nombre">Nombre Completo con Apellidos</label>
+          <div class="col-sm-8">
+            <input type="text" id="nombre" name="nombre" class="form-control">
+        </div>
+        </div>
+        <div class="form-group has-error">
+          <label class="col-sm-2 control-label" for="number">Precio</label>
+          <div class="col-sm-10 input-group">
+            <span class="input-group-addon">$</span>
+            <input type="number"  id="number" name="nombre" class="form-control" placeholder="Precio">
+            <span class="input-group-addon">.00</span>
+          </div>
+          </div>
+          <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+      </form>
+      <button type="button" class="btn btn-primary btn-lg">Enviar</button>
+       <button type="button" class="btn btn-success">Enviar</button>
+        <button type="button" class="btn btn-info btn-sm">Enviar</button>
+         <button type="button" class="btn btn-warning btn-xs">Enviar</button>
+          <button type="button" class="btn btn-danger">Enviar</button>
+           <button type="button" class="btn btn-like">Enviar</button>
+           <br><br>
+           <a href="#" role="button" class="btn btn-default">Enviar</a>
+           <button class="btn btn-default" type="submit">
+           <span class="glyphicon glyphicon-map-marker"></span> Enviar</button>
+           <input type="button" class="btn btn-default" value="Enviar">
+           <input type="submit" class="btn btn-default" value="Enviar">
+           <br>
+           <br>
+           
+    </div>
+    <div class="imagen">
+      <img src="logo.png" class="img-thumbnail">
+    </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
